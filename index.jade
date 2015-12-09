@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title Weather
+        meta(charset="utf-8")
+        meta(name="vieport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="css/main.css")
+        // Weather icons: https://erikflowers.github.io/weather-icons/
+        link(rel="stylesheet" href="css/weather-icons.css")
+        link(rel="stylesheet" href="css/weather-icons-wind.css")
+        script(src="js/main.js")
+    body
+        video#bckgrndvid(autoplay loop muted)
+            source(src="video/cloudy.mp4" type="video/mp4")
+        .wrapper
+            header#top_header
+                h1 Free Code Camp Zipline
+                h2 Local Weather App
+            .current_conditions
+                i#weather_icon.wi.wi-night-cloudy-high
+                span#temp
+            section.details
+                .location
+                .description
+                .wind
