@@ -1,8 +1,8 @@
-// function main() {
+function main() {
 
-    var coordinates;
-    var forecast;
-    var weatherIcons;// = getJSON("https://gist.githubusercontent.com/tbranyen/62d974681dea8ee0caa1/raw/3405bfb2a76b7cbd90fde33d8536f0cd13706955/icons.json");
+    var coordinates,
+        forecast,
+        weatherIcons;
 
     function get(url) {
 
@@ -45,7 +45,7 @@
             document.querySelector(".location").textContent  = forecast.name;
             document.querySelector(".description").textContent  = forecast.weather[0].description;
             document.querySelector(".wind").innerHTML = forecast.wind.speed + " km/h; <br> direction: " + forecast.wind.deg + " degrees";
-            document.querySelector("#temp").textContent  = forecast.main.temp + " °C";
+            document.querySelector("#temp").textContent  = Math.round(forecast.main.temp) + " °C";
             
         }).then(function() {
             
@@ -72,7 +72,6 @@
 
         // Finally tack on the prefix.
         icon = prefix + icon;
-        console.log(icon);
         document.querySelector("#weather_icon").className = icon;
     }
 
@@ -107,8 +106,7 @@
     });
 
     getWeather();
-    //  showWeatherIcon();
 
-// }
+}
 
-// main();
+main();

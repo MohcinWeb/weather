@@ -1,10 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700)
+@import url(https://fonts.googleapis.com/css?family=Pontano+Sans|Josefin+Sans:700)
 
 $raleway-font: Raleway, sans-serif
+$pontano-font: Pontano Sans, sans-serif
+$josefin-font-header: Josefin Sans, sans-serif
 
 html 
     box-sizing: border-box
-    font-family: $raleway-font   
+    font-family: $pontano-font
 
 *, *:before, *:after
     box-sizing: inherit
@@ -13,6 +16,7 @@ html
     margin-bottom: 20px
     #temp
         margin-left: 10px
+        font-size: 2em
 
 .details, .details *, .wrapper
     display: flex
@@ -22,6 +26,7 @@ html
     align-items: center
 
 #bckgrndvid
+    opacity: 0.7
     position: fixed
     top: 50%
     left: 50%
@@ -36,6 +41,7 @@ html
 #top_header
     h1, h2
         text-align: center
+        font-family: $josefin-font-header
 
 .details *
     justify-content: center
